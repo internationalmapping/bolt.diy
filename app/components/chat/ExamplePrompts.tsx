@@ -1,11 +1,18 @@
 import React from 'react';
+import { STARTER_TEMPLATES } from '~/utils/constants';
+;
 
 const EXAMPLE_PROMPTS = [
-  { text: 'Build a todo app in React using Tailwind' },
+  { text: 'Create a simple web map using ArcGIS Web Components' },
+  { text: 'Build a site that uses Astro and @koopjs/featureserver to store geojson and serve it to a web map' },
+  ...STARTER_TEMPLATES.map((template) => ({
+    text: template.label,
+  })),
+  /*{ text: 'Build a todo app in React using Tailwind' },
   { text: 'Build a simple blog using Astro' },
   { text: 'Create a cookie consent form using Material UI' },
   { text: 'Make a space invaders game' },
-  { text: 'Make a Tic Tac Toe game in html, css and js only' },
+  { text: 'Make a Tic Tac Toe game in html, css and js only' },*/
 ];
 
 export function ExamplePrompts(sendMessage?: { (event: React.UIEvent, messageInput?: string): void | undefined }) {

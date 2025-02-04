@@ -7,6 +7,8 @@
   "type": "module",
   "version": "0.0.6",
   "scripts": {
+    "up:dev": "docker compose --profile development up",
+    "up:prod": "docker compose --profile production up",
     "deploy": "npm run build && wrangler pages deploy",
     "build": "remix vite:build",
     "dev": "node pre-start.cjs  && remix vite:dev",
@@ -35,7 +37,7 @@
     "@ai-sdk/cohere": "^1.0.3",
     "@ai-sdk/google": "^0.0.52",
     "@ai-sdk/mistral": "^0.0.43",
-    "@ai-sdk/openai": "^0.0.66",
+    "@ai-sdk/openai": "^1.0.18",
     "@codemirror/autocomplete": "^6.18.3",
     "@codemirror/commands": "^6.7.1",
     "@codemirror/lang-cpp": "^6.0.2",
@@ -106,7 +108,6 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@blitz/eslint-plugin": "0.1.0",
     "@cloudflare/workers-types": "^4.20241127.0",
     "@remix-run/dev": "^2.15.0",
     "@types/diff": "^5.2.3",

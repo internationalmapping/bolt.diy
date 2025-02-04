@@ -1,7 +1,9 @@
-import blitzPlugin from '@blitz/eslint-plugin';
-import { jsFileExtensions } from '@blitz/eslint-plugin/dist/configs/javascript.js';
-import { getNamingConventionRule, tsFileExtensions } from '@blitz/eslint-plugin/dist/configs/typescript.js';
+// import blitzPlugin from '@blitz/eslint-plugin';
+// import { getNamingConventionRule, tsFileExtensions } from '@blitz/eslint-plugin/dist/configs/typescript.js';
 
+function generateNamingConventionRegex(defaults, extensions = []) {
+    return `^(${defaults.concat(extensions).join('|')})$`;
+}
 export default [
   {
     ignores: [
@@ -12,7 +14,7 @@ export default [
       '**/.history',
     ],
   },
-  ...blitzPlugin.configs.recommended(),
+  // ...blitzPlugin.configs.recommended(),
   {
     rules: {
       '@blitz/catch-error-name': 'off',
@@ -34,7 +36,34 @@ export default [
   {
     files: ['**/*.tsx'],
     rules: {
-      ...getNamingConventionRule({}, true),
+      '@typescript-eslint/naming-convention': [
+          'error',
+          {
+              selector: ['variable', 'function'],
+              format: ['camelCase', 'UPPER_CASE', tsx && 'StrictPascalCase'].filter(Boolean),
+              leadingUnderscore: 'allowSingleOrDouble',
+              trailingUnderscore: 'forbid',
+              filter: {
+                  regex: generateNamingConventionRegex(['__dirname'], extensions?.variable?.exceptions),
+                  match: false,
+              },
+          },
+          {
+              selector: 'parameter',
+              format: ['camelCase'],
+              leadingUnderscore: 'allow',
+          },
+          {
+              selector: 'typeLike',
+              format: ['PascalCase'],
+          },
+          {
+              selector: 'memberLike',
+              modifiers: ['private'],
+              format: ['camelCase'],
+              leadingUnderscore: 'require',
+          },
+      ],
     },
   },
   {
@@ -44,7 +73,7 @@ export default [
     },
   },
   {
-    files: [...tsFileExtensions, ...jsFileExtensions, '**/*.tsx'],
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.js', '**/*.jsx', '**/*.mjs', '**/*.cjs', '**/*.tsx'],
     ignores: ['functions/*'],
     rules: {
       'no-restricted-imports': [

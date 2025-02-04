@@ -148,15 +148,15 @@ Examples:
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-spring": "^9.7.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-spring": "^9.7.5"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.2.0"
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7"
   }
 }</boltAction>
         <boltAction type="file" filePath="index.html">...</boltAction>

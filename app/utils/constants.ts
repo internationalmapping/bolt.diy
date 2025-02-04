@@ -25,6 +25,72 @@ PROVIDER_LIST.forEach((provider) => {
 // starter Templates
 
 export const STARTER_TEMPLATES: Template[] = [
+  /*{
+    name: 'bolt-arcgis-map-components-vite',
+    label: 'Create a web app using ArcGIS Map Components with Vite',
+    description: 'Create a web app using ArcGIS Map Components with Vite',
+    githubRepo: 'https://github.com/Esri/jsapi-resources/component-samples/map-components/tutorials/create-a-web-app-using-components-solution',
+    tags: ['arcgis', 'vite', 'components'],
+    icon: 'i-bolt:vite',
+  },*/
+
+  {
+    name: 'bolt-arcgis-map-components-react',
+    label: 'ArcGIS Map Components with React',
+    description: 'ArcGIS Map Components using React and Vite',
+    githubRepo: 'Esri/arcgis-maps-sdk-javascript-samples-beta/packages/map-components/templates/react',
+    tags: ['arcgis', 'react', 'components'],
+    icon: 'i-bolt:react',
+  },
+  
+  {
+    name: 'bolt-arcgis-map-components-vite',
+    label: 'ArcGIS Map Components with Vite',
+    description: 'ArcGIS Map Components using Vite',
+    githubRepo: 'Esri/arcgis-maps-sdk-javascript-samples-beta/packages/map-components/templates/vite',
+    tags: ['arcgis', 'vite', 'components'],
+    icon: 'i-bolt:vite',
+  },
+
+  {
+    name: 'bolt-arcgis-charts-components-react',
+    label: 'ArcGIS Charts Components with React',
+    description: 'ArcGIS Charts Components using React',
+    githubRepo: 'Esri/arcgis-maps-sdk-javascript-samples-beta/packages/charts-components/templates/react',
+    tags: ['arcgis', 'react', 'charts'],
+    icon: 'i-bolt:react',
+  },
+
+  {
+    name: 'bolt-arcgis-coding-components-react',
+    label: 'ArcGIS Coding Components with React',
+    description: 'ArcGIS Coding Components using React',
+    githubRepo: 'Esri/arcgis-maps-sdk-javascript-samples-beta/packages/coding-components/templates/react',
+    tags: ['arcgis', 'react', 'coding'],
+    icon: 'i-bolt:react',
+  },
+
+  {
+    name: 'bolt-arcgis-amd-script-tag',
+    label: 'ArcGIS AMD Script Tag',
+    description: 'ArcGIS Map Components using AMD',
+    githubRepo: 'Esri/arcgis-maps-sdk-javascript-samples-beta/packages/map-components/templates/amd-script-tag',
+    tags: ['arcgis', 'amd', 'components'],
+    icon: 'i-bolt:amd',
+  },
+
+  // Calcite Components with React
+  // https://github.com/Esri/calcite-design-system/tree/dev/examples/components/react
+  {
+    name: 'bolt-calcite-components-react',
+    label: 'Calcite Components with React',
+    description: 'Calcite Components using React',
+    githubRepo: 'Esri/calcite-design-system/tree/dev/examples/components/react',
+    tags: ['calcite', 'react', 'components'],
+    icon: 'i-bolt:react',
+  },
+
+  /*
   {
     name: 'bolt-astro-basic',
     label: 'Astro Basic',
@@ -69,7 +135,7 @@ export const STARTER_TEMPLATES: Template[] = [
     name: 'bolt-sveltekit',
     label: 'SvelteKit',
     description: 'SvelteKit starter template for building fast, efficient web applications',
-    githubRepo: 'bolt-sveltekit-template',
+    githubRepo: 'thecodacus/bolt-sveltekit-template',
     tags: ['svelte', 'sveltekit', 'typescript'],
     icon: 'i-bolt:svelte',
   },
@@ -113,4 +179,5 @@ export const STARTER_TEMPLATES: Template[] = [
     tags: ['angular', 'typescript', 'frontend', 'spa'],
     icon: 'i-bolt:angular',
   },
+  */
 ];

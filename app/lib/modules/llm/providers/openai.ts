@@ -13,6 +13,9 @@ export default class OpenAIProvider extends BaseProvider {
   };
 
   staticModels: ModelInfo[] = [
+    { name: 'o1', label: 'o1', provider: 'OpenAI', maxTokenAllowed: 8000 },
+    { name: 'o1-mini', label: 'o1-mini', provider: 'OpenAI', maxTokenAllowed: 8000 },
+    { name: 'o1-preview', label: 'o1-preview', provider: 'OpenAI', maxTokenAllowed: 8000 },
     { name: 'gpt-4o', label: 'GPT-4o', provider: 'OpenAI', maxTokenAllowed: 8000 },
     { name: 'gpt-4o-mini', label: 'GPT-4o Mini', provider: 'OpenAI', maxTokenAllowed: 8000 },
     { name: 'gpt-4-turbo', label: 'GPT-4 Turbo', provider: 'OpenAI', maxTokenAllowed: 8000 },

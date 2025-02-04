@@ -196,8 +196,11 @@ export async function getTemplates(templateName: string, title?: string) {
     return null;
   }
 
-  const githubRepo = template.githubRepo;
-  const files = await getGitHubRepoContent(githubRepo);
+  // split by second slash
+  const githubRepo = template.githubRepo.split('/').slice(0, 2).join('/');
+  const githubRepoPath = template.githubRepo.split('/').slice(2).join('/');
+  const files = await getGitHubRepoContent(githubRepo, githubRepoPath);
+  console.debug({ githubRepo, githubRepoPath, files });
 
   let filteredFiles = files;
 
